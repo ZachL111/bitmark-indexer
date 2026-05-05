@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+build/
+dist/
+.idea/
+.vscode/
+target/
+Cargo.lock
