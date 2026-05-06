@@ -21,3 +21,5 @@ pub fn score(signal: Signal) -> i32 {
 pub fn classify(signal: Signal) -> &'static str {
     if score(signal) >= THRESHOLD { "accept" } else { "review" }
 }
+
+pub mod domain_review;

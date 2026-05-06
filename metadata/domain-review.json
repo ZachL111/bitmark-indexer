@@ -1,0 +1,73 @@
+{
+  "repo": "bitmark-indexer",
+  "language": "Rust",
+  "category": "Blockchain tooling",
+  "goal": "Index block headers, chain scores, and reorg decisions.",
+  "review_model": {
+    "terms": [
+      "event finality",
+      "nonce pressure",
+      "settlement risk",
+      "proof depth"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "event finality",
+      "signal": 72,
+      "slack": 41,
+      "drag": 26,
+      "confidence": 62,
+      "score": 169,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "nonce pressure",
+      "signal": 72,
+      "slack": 23,
+      "drag": 17,
+      "confidence": 49,
+      "score": 165,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "settlement risk",
+      "signal": 75,
+      "slack": 44,
+      "drag": 21,
+      "confidence": 83,
+      "score": 214,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "proof depth",
+      "signal": 88,
+      "slack": 34,
+      "drag": 32,
+      "confidence": 92,
+      "score": 206,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "event finality",
+      "signal": 82,
+      "slack": 38,
+      "drag": 32,
+      "confidence": 94,
+      "score": 200,
+      "lane": "ship"
+    }
+  ]
+}
