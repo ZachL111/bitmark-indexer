@@ -1,0 +1,17 @@
+{
+  "repo": "bitmark-indexer",
+  "thresholds": {
+    "signal": 3,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 4,
+    "ship": 207,
+    "watch": 107
+  },
+  "terms": [
+    "event finality",
+    "nonce pressure",
+    "settlement risk",
+    "proof depth"
+  ]
+}

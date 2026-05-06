@@ -61,3 +61,9 @@ foreach ($pathPattern in $knownPaths) {
 cargo test
 
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-bitmark-indexer-detail.ps1
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-bitmark-indexer-properties.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-bitmark-indexer-golden.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
